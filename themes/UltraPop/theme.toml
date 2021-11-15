@@ -4,7 +4,7 @@
 name = "UltraPop"
 license = "MIT"
 licenselink = "https://github.com/pop-ketle/Hugo-Theme/blob/main/themes/UltraPop/LICENSE"
-description = "pop-ketle's theme for portfolio"
+description = "Ultra Pop theme"
 homepage = "http://example.com/"
 tags = ["Blog", 'Portfolio', 'Docs', 'Gallery']
 features = []
