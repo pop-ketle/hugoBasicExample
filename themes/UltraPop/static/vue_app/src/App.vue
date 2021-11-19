@@ -119,16 +119,5 @@ import TopMenu from './components/TopMenu';
     components: {
       TopMenu,
     },
-
-    // data(){
-    //     return {
-    //       TopMenu: "TopMenu"
-    //     }
-    // }
-
-    // data: () => ({
-    //   drawer: false,
-    //   group: null,
-    // }),
   }
 </script>

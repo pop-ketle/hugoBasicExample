@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
+{{- partial "head.html" . -}}
+<body>
+    <template>
+        <div id="app"><v-app>
+
+                {{- partial "header.html" . -}}
+                <div id="content">
+                {{- block "main" . }}{{- end }}
+                </div>
+                {{- partial "footer.html" . -}}
+                
+            </v-app></div>
+        </template>
     </body>
 </html>
+
+
+<script>
+import HelloWorld from './components/HelloWorld';
+import TopMenu from "{{"vue_app/components/TopMenu" | relURL}}";
+// "{{"vue_app/components/TopMenu"| relURL}}"
+
+export default {
+    name: 'app',
+
+    components: {
+        TopMenu,
+    },
+}
+</script>
