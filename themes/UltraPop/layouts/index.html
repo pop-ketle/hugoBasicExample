@@ -2,10 +2,15 @@
 
 <h1>Hello World</h1>
 
+{{ .Site.Params }}
+
+<br><br>
+
+
 <h1>記事一覧</h1>
 
 {{ range first 10 .Pages }}
-<a href={{ .Permalink }}>{{ .Name }}</a>
+    <a href={{ .Permalink }}>{{ .Name }}</a>
 {{ end }}
 
 {{ end }}

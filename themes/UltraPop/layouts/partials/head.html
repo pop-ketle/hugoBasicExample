@@ -6,6 +6,9 @@
         {{ hugo.Generator }}
         <title>{{ .Title }} {{ default "::" .Site.Params.titleSeparator }} {{ .Site.Title }}</title>
 
-        <script src="{{"vue_app/src/main.js"| relURL}}"></script>
-        <script src="{{"vue_app/src/plugins/vuetify.js"| relURL}}"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+
+        <script src="{{"vue_app/node_modules/vue/dist/vue.js"| relURL}}"></script>
+        <script src="{{"vue_app/node_modules/vuetify/dist/vuetify.js"| relURL}}"></script>
     </head>

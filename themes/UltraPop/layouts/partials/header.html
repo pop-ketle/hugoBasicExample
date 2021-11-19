@@ -1,8 +1,4 @@
 
-
-<a href="https://www.kaggle.com/popketle"><img src="/images/kaggle_logo_icon.png" alt="", width="30" height="30"></a>
-<a href="https://signate.jp/users/37802"><img src="/images/signate_logo_icon.png" alt="", width="30" height="30"></a>
-<a href="https://comp.probspace.com/users/pop-ketle/0"><img src="/images/probspace_logo_icon.png" alt="", width="30" height="30"></a>
-<a href="https://atcoder.jp/users/popketle"><img src="/images/atcoder_logo_icon.png" alt="", width="30" height="30"></a>
-<a href="https://github.com/pop-ketle"><img src="/images/github_logo_icon.png" alt="", width="30" height="30"></a>
-<a href="https://qiita.com/pop-ketle"><img src="/images/qiita_logo_icon.png" alt="", width="30" height="30"></a>
+{{ range .Site.Params.Icon }}
+    <a href="{{ .Account_link }}"><img src="{{ .Image }}" alt="", width="30" height="30"></a>
+{{ end }}

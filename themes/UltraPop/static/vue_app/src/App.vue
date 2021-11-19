@@ -1,5 +1,32 @@
 <template>
   <v-app>
+    <!-- <v-navigation-drawer app> -->
+      <!-- -->
+    <!-- </v-navigation-drawer> -->
+
+    <!-- <v-app-bar app> -->
+      <!-- -->
+      <TopMenu></TopMenu>
+    <!-- </v-app-bar> -->
+
+    <!-- アプリケーションのコンポーネントに基づいてコンテンツのサイズを決定 -->
+    <!-- <v-main> -->
+
+      <!-- アプリケーションに適切なgutterを提供 -->
+      <!-- <v-container fluid> -->
+
+        <!-- vue-routerを使用する場合 -->
+        <!-- <router-view></router-view> -->
+      <!-- </v-container> -->
+    <!-- </v-main> -->
+
+    <!-- <v-footer app> -->
+      <!-- -->
+    <!-- </v-footer> -->
+  </v-app>
+
+
+  <!-- <v-app>
     <v-card class="overflow-hidden">
       <v-app-bar
         color=#e0a4c6
@@ -68,70 +95,40 @@
             </v-list-item-icon>
             <v-list-item-title>Account</v-list-item-title>
           </v-list-item>
+
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
 
-    </v-card>
+    </v-card> -->
 
-    <!-- <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar> -->
 
     <!-- <v-main>
       <HelloWorld/>
     </v-main> -->
-  </v-app>
+  <!-- </v-app> -->
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-// import vue_app_bar from './components/v_app_bar';
-
+import TopMenu from './components/TopMenu';
 
   export default {
     name: 'app',
 
-    // components: {
-    //   vue_app_bar,
-    // },
+    components: {
+      TopMenu,
+    },
 
-    data: () => ({
-      drawer: false,
-      group: null,
-    }),
+    // data(){
+    //     return {
+    //       TopMenu: "TopMenu"
+    //     }
+    // }
+
+    // data: () => ({
+    //   drawer: false,
+    //   group: null,
+    // }),
   }
 </script>

@@ -1,4 +1,5 @@
-baseURL = "https://gohugo.io"
+# baseURL = "https://gohugo.io"
+baseURL = "https://pop-ketle.github.io"
 title = "Hugo Themes"
 author = "Steve Francia"
 copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
@@ -9,6 +10,10 @@ enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
+theme = "UltraPop"
+
+[outputs]
+  home = ["html", "rss", "json"]
 
 [menu]
 
@@ -49,3 +54,29 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
+
+[params]
+  [params.icon]
+    [params.icon.0]
+      account_link = "https://github.com/pop-ketle"
+      image = "/images/github_logo_icon.png"
+
+    [params.icon.1]
+      account_link = "https://www.kaggle.com/popketle"
+      image = "/images/kaggle_logo_icon.png"
+
+    [params.icon.2]
+      account_link = "https://signate.jp/users/37802"
+      image = "/images/signate_logo_icon.png"
+      
+    [params.icon.3]
+      account_link = "https://comp.probspace.com/users/pop-ketle/0"
+      image = "/images/probspace_logo_icon.png"
+
+    [params.icon.4]
+      account_link = "https://atcoder.jp/users/popketle"
+      image = "/images/atcoder_logo_icon.png"
+
+    [params.icon.5]
+      account_link = "https://qiita.com/pop-ketle"
+      image = "/images/qiita_logo_icon.png"
