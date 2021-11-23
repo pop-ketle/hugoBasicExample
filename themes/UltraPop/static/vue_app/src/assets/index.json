@@ -1,0 +1,52 @@
+{
+    "title": "Hugo Themes",
+    "url": "https://test-pop-ketle.github.io/",
+    "feed": "https://test-pop-ketle.github.io/index.xml",
+    "entry": [
+      {
+        "title": "Data_competitions",
+        "url": "https://test-pop-ketle.github.io/data_competitions/",
+        "published": "2021-11-15T05:09:54+00:00",
+        "update": "2021-11-15T05:09:54+00:00"
+      },
+      {
+        "title": "",
+        "url": "https://test-pop-ketle.github.io/archives/",
+        "published": "2019-05-28T00:00:00+00:00",
+        "update": "2019-05-28T00:00:00+00:00"
+      },
+      {
+        "title": "Posts",
+        "section": "post",
+        "url": "https://test-pop-ketle.github.io/post/",
+        "published": "2019-03-11T00:00:00+00:00",
+        "update": "2019-03-11T00:00:00+00:00"
+      }
+    ],
+    "icon": [
+      {
+        "account_link": "https://github.com/pop-ketle",
+        "image": "/images/github_logo_icon.png"
+      },
+      {
+        "account_link": "https://www.kaggle.com/popketle",
+        "image": "/images/kaggle_logo_icon.png"
+      },
+      {
+        "account_link": "https://signate.jp/users/37802",
+        "image": "/images/signate_logo_icon.png"
+      },
+      {
+        "account_link": "https://comp.probspace.com/users/pop-ketle/0",
+        "image": "/images/probspace_logo_icon.png"
+      },
+      {
+        "account_link": "https://atcoder.jp/users/popketle",
+        "image": "/images/atcoder_logo_icon.png"
+      },
+      {
+        "account_link": "https://qiita.com/pop-ketle",
+        "image": "/images/qiita_logo_icon.png"
+      }
+    ]
+}

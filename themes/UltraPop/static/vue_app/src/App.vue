@@ -1,5 +1,15 @@
 <template>
   <v-app>
+
+    <v-list>
+      <v-list-item 
+        v-for="(sample, key) in datas"
+        :key="key">
+        {{ sample }}
+        {{ sample.title }} : {{ sample.url }}
+      </v-list-item>
+    </v-list>
+
     <!-- <v-navigation-drawer app> -->
       <!-- -->
     <!-- </v-navigation-drawer> -->
@@ -30,11 +40,19 @@
 // import HelloWorld from './components/HelloWorld';
 import TopMenu from './components/TopMenu';
 
-  export default {
-    name: 'app',
+import datas from './assets/index.json'
 
-    components: {
-      TopMenu,
-    },
+export default {
+  name: 'app',
+
+  components: {
+    TopMenu,
+  },
+
+  data(){
+    return {
+      datas: datas
+    };
   }
+};
 </script>
