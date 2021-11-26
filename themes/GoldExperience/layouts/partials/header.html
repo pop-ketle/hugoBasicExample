@@ -9,18 +9,26 @@
             </div>
             <!-- サイドバー -->
             <div class="ui sidebar inverted vertical menu">
+                <div class="ui segment">
+                    <img class="ui centered medium image" src="/images/top_icon.jpg">
+                    <p style="text-align: center">
+                        {{ if .Site.Author.name }} Name: {{ .Site.Author.name }} <br>{{ end }}
+                        {{ if .Site.Author.location }} Place: {{ .Site.Author.location }}<i class="{{ .Site.Author.location | urlize }} flag"></i>{{ end }}
+                    </p>
+                </div>
+
+                {{ range .Site.RegularPages }}
+                    <a class="item" href={{ .Permalink }}>{{ .Name }}</a>
+                {{ end }}
+
                 <a class="item">1</a>
                 <a class="item">2</a>
                 <a class="item">3</a>
             </div>
-            <!-- コンテンツ本体
-            <div class="pusher">
-                <h1>見出し</h1>
-            </div> -->
         </div>
 
-        <div class="thirteen wide column">
-            <p></p>
-        </div>
+        <!-- <div class="thirteen wide column">
+            <p>{{ .Site.Title }}</p>
+        </div> -->
     </div>
 </div>
