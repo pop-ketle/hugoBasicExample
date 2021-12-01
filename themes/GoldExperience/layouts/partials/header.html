@@ -1,28 +1,26 @@
 
-<div style="height:85px"></div>
+<div style="height:90px"></div>
 <div class="row">
     <!-- サイドバー メニュー -->
     <div class="ui fixed menu" id="header_bar">
-        <div class="menu">
+        <!-- <div class="menu"> -->
             <div id="js-sidebar" class="item"><i class="icon large grey content"></i></div>
 
-            <div class="ui grid"> <!-- 幅調整用 -->
-                <div class="column"></div><div class="column"></div><div class="column"></div>
+            <div class="ui grid">
+                <div class="left floated thirteen wide column"><h1>{{ .Site.Title }}</h1></div>
+
+                <div class="right floated ten wide column">
+                    <!-- from https://keens.github.io/blog/2021/02/23/hugonoburogunizenbunkensakuwotsuketa/ -->
+                    <h3><p id="search" style="text-align: right">
+                        <input type="text">
+                        <button onclick="doSearch()" ><i class="fas fa-search"></i></button>
+                    </p></h3>
+                </div>
             </div>
 
-            <h1>{{ .Site.Title }}</h1>
-
-            <div class="ui grid"> <!-- 幅調整用 -->
-                <div class="column"></div><div class="column"></div><div class="column"></div>
-            </div>
-
-            <h3><p id="search" style="text-align: right"> <!-- from https://keens.github.io/blog/2021/02/23/hugonoburogunizenbunkensakuwotsuketa/ -->
-                <input type="text" id="search">
-                <button onclick="doSearch()" ><i class="fas fa-search"></i></button>
-            </p></h3>
-        </div>
+        <!-- </div> -->
     </div>
-    <!-- サイドバー 中身 -->
+    <!-- サイドバー 中身-->
     <div class="ui sidebar inverted vertical menu">
         <div class="ui segment">
             <img class="ui centered medium image" src="{{ "/images/top_icon.jpg" | relURL }}">

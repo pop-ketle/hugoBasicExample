@@ -6,10 +6,6 @@
     border-bottom: 6px double #000;
 }
 
-#search {
-    vertical-align:bottom;
-}
-
 h1:first-letter {
     font-size: 150%;
     color: #0075a9;
@@ -37,19 +33,4 @@ h1#biography {
 }
 .fa-blog:hover{
     color: #55C500;
-}
-
-/*ナビゲーションの固定*/
-nav{
-    /*stickyで固定*/
-    position: -webkit-sticky;/*Safari*/
-	position: sticky;
-    z-index: 10;
-    /*固定したい位置*/
-	top: 100px;
-    /*ナビゲーションの形状*/
-    background:#fff;
-	border: 1px solid #eee;
-	box-shadow:0 0 5px #ddd;
-	padding: 20px;
 }
