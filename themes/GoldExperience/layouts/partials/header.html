@@ -1,31 +1,46 @@
-<div class="ui celled grid">
-    <div class="row">
-        <div class="three wide column">
-            <!-- サイドバー トグルボタン -->
-            <div class="ui fixed menu">
-                <div class="menu">
-                    <div id="js-sidebar" class="item"><i class="icon large grey content"></i></div>
-                </div>
-            </div>
-            <!-- サイドバー -->
-            <div class="ui sidebar inverted vertical menu">
-                <div class="ui segment">
-                    <img class="ui centered medium image" src="/images/top_icon.jpg">
-                    <p style="text-align: center">
-                        {{ if .Site.Author.name }} Name: {{ .Site.Author.name }} <br>{{ end }}
-                        {{ if .Site.Author.location }} Place: {{ .Site.Author.location }}<i class="{{ .Site.Author.location | urlize }} flag"></i>{{ end }}
-                    </p>
-                </div>
 
-                <a class="item" href={{ .Site.BaseURL }}>TOP PAGE</a>
-                {{ range .Site.RegularPages }}
-                    <a class="item" href={{ .Permalink }}>{{ .Name }}</a>
-                {{ end }}
+<div style="height:85px"></div>
+<div class="row">
+    <!-- サイドバー メニュー -->
+    <div class="ui fixed menu" id="header_bar">
+        <div class="menu">
+            <div id="js-sidebar" class="item"><i class="icon large grey content"></i></div>
+
+            <div class="ui grid"> <!-- 幅調整用 -->
+                <div class="column"></div><div class="column"></div><div class="column"></div>
             </div>
+
+            <h1>{{ .Site.Title }}</h1>
+
+            <div class="ui grid"> <!-- 幅調整用 -->
+                <div class="column"></div><div class="column"></div><div class="column"></div>
+            </div>
+
+            <h3><p id="search" style="text-align: right"> <!-- from https://keens.github.io/blog/2021/02/23/hugonoburogunizenbunkensakuwotsuketa/ -->
+                <input type="text" id="search">
+                <button onclick="doSearch()" ><i class="fas fa-search"></i></button>
+            </p></h3>
+        </div>
+    </div>
+    <!-- サイドバー 中身 -->
+    <div class="ui sidebar inverted vertical menu">
+        <div class="ui segment">
+            <img class="ui centered medium image" src="{{ "/images/top_icon.jpg" | relURL }}">
+            <p style="text-align: center">
+                {{ if .Site.Author.name }} Name: {{ .Site.Author.name }} <br>{{ end }}
+                {{ if .Site.Author.location }} Place: {{ .Site.Author.location }}<i class="{{ .Site.Author.location | urlize }} flag"></i>{{ end }}
+            </p>
+            <center><div class="fa-2x bgc">
+                {{ range .Site.Params.Shortcuts }}
+                    <a href="{{ .Url }}" target="_blank">{{ .Shortcuts_tag | safeHTML }}</a>
+                {{ end }}
+            </div></center>
         </div>
 
-        <!-- <div class="thirteen wide column">
-            <p>{{ .Site.Title }}</p>
-        </div> -->
+        <a class="item" href={{ .Site.BaseURL }}>TOP PAGE</a>
+        {{ range .Site.RegularPages }}
+            <a class="item" href={{ .Permalink }}>{{ .Name }}</a>
+        {{ end }}
     </div>
 </div>
+

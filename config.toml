@@ -57,27 +57,22 @@ series = "series"
     disableInlineCSS = true
 
 [params]
-  [params.icon]
-    [params.icon.0]
-      account_link = "https://github.com/pop-ketle"
-      image = "/images/github_logo_icon.png"
+  [params.github_acount]
+    name = "pop-ketle"
 
-    [params.icon.1]
-      account_link = "https://www.kaggle.com/popketle"
-      image = "/images/kaggle_logo_icon.png"
+  [params.shortcuts]
+    [params.shortcuts.0]
+    shortcuts_tag = '<i class="fab fa-twitter fa-fw icon_black faa-tada animated-hover"></i>'
+    url = 'https://twitter.com/ken7272popqjim'
 
-    [params.icon.2]
-      account_link = "https://signate.jp/users/37802"
-      image = "/images/signate_logo_icon.png"
+    [params.shortcuts.1]
+    shortcuts_tag = '<i class="fab fa-kaggle fa-fw icon_black faa-tada animated-hover"></i>'
+    url = 'https://www.kaggle.com/popketle'
+
+    [params.shortcuts.2]
+    shortcuts_tag = '<i class="fab fa-github fa-fw icon_black faa-tada animated-hover"></i>'
+    url = 'https://github.com/pop-ketle'
       
-    [params.icon.3]
-      account_link = "https://comp.probspace.com/users/pop-ketle/0"
-      image = "/images/probspace_logo_icon.png"
-
-    [params.icon.4]
-      account_link = "https://atcoder.jp/users/popketle"
-      image = "/images/atcoder_logo_icon.png"
-
-    [params.icon.5]
-      account_link = "https://qiita.com/pop-ketle"
-      image = "/images/qiita_logo_icon.png"
+    [params.shortcuts.3]
+    shortcuts_tag = '<i class="fas fa-blog fa-fw icon_black faa-tada animated-hover"></i>'
+    url = 'https://pop-ketle.hatenablog.com/'
