@@ -3,22 +3,28 @@
 <div class="row">
     <!-- サイドバー メニュー -->
     <div class="ui fixed menu" id="header_bar">
-        <!-- <div class="menu"> -->
-            <div id="js-sidebar" class="item"><i class="icon large grey content"></i></div>
+        
+        <div id="js-sidebar" class="item"><i class="icon large grey content"></i></div>
 
-            <div class="ui grid">
-                <div class="left floated thirteen wide column"><h1>{{ .Site.Title }}</h1></div>
-
-                <div class="right floated ten wide column">
+        <!-- 幅調整用 -->
+        <div class="ui grid">
+            <div class="column"></div>
+            <!-- <div class="column"></div> -->
+            
+            <div class="ten wide column"><h1>{{ .Site.Title }}</h1></div>
+            
+            <div class="ten wide column">
+                <div class="search item">
                     <!-- from https://keens.github.io/blog/2021/02/23/hugonoburogunizenbunkensakuwotsuketa/ -->
                     <h3><p id="search" style="text-align: right">
-                        <input type="text">
+                        <input type="text" placeholder="Type to search...">
                         <button onclick="doSearch()" ><i class="fas fa-search"></i></button>
                     </p></h3>
                 </div>
             </div>
+        </div>
 
-        <!-- </div> -->
+            
     </div>
     <!-- サイドバー 中身-->
     <div class="ui sidebar inverted vertical menu">
