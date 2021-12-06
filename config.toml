@@ -62,17 +62,17 @@ series = "series"
 
   [params.shortcuts]
     [params.shortcuts.0]
-    shortcuts_tag = '<i class="fab fa-twitter fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://twitter.com/ken7272popqjim'
+      shortcuts_tag = '<i class="fab fa-twitter fa-fw icon_black faa-tada animated-hover"></i>'
+      url = 'https://twitter.com/ken7272popqjim'
 
     [params.shortcuts.1]
-    shortcuts_tag = '<i class="fab fa-kaggle fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://www.kaggle.com/popketle'
+      shortcuts_tag = '<i class="fab fa-kaggle fa-fw icon_black faa-tada animated-hover"></i>'
+      url = 'https://www.kaggle.com/popketle'
 
     [params.shortcuts.2]
-    shortcuts_tag = '<i class="fab fa-github fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://github.com/pop-ketle'
+      shortcuts_tag = '<i class="fab fa-github fa-fw icon_black faa-tada animated-hover"></i>'
+      url = 'https://github.com/pop-ketle'
       
     [params.shortcuts.3]
-    shortcuts_tag = '<i class="fas fa-blog fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://pop-ketle.hatenablog.com/'
+      shortcuts_tag = '<i class="fas fa-blog fa-fw icon_black faa-tada animated-hover"></i>'
+      url = 'https://pop-ketle.hatenablog.com/'
