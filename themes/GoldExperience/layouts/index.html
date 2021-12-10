@@ -34,6 +34,27 @@
   <h2>Github Contributions</h2><br>
   <img src="https://grass-graph.appspot.com/images/{{ .Site.Params.Github_acount.name }}.png">
 </center>
+
+{{ $github_acount_name := ( .Site.Params.Github_acount.name )}}
+{{ $git_repos:= getJSON "https://api.github.com/users/" $github_acount_name "/repos" }}
+
+
+
+<br><br><br>
+
+<!-- show your Github repos -->
+
+{{ range $i, $v := sort $git_repos "stargazers_count" "desc" }}
+    {{ if lt $i 12 }}
+      name = {{ .name }}<br>
+      url = {{ .html_url }}<br>
+      fork = {{ .fork }}<br>
+      star = {{ .stargazers_count }}<br>
+      <br>
+  {{ end }}
+{{ end }}
+
+{{ $git_repos }}
 {{ end }}
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
