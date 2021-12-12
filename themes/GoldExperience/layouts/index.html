@@ -41,37 +41,48 @@
   {{ $github_acount_name := ( .Site.Params.Github_acount.name )}}
   {{ $git_repos:= getJSON "https://api.github.com/users/" $github_acount_name "/repos" }}
 
-  <!-- <div class="ui stackable grid"> -->
-    <!-- 幅調整カラム -->
-    <!-- <div class="one wide column"></div> -->
+  <div class="ui stackable grid">
+    <div class="one wide column"></div> <!-- 幅調整カラム -->
     
-    <!-- <div class="ten wide column"> -->
-    <div class="ui cards">
-    {{ range $i, $v := sort $git_repos "stargazers_count" "desc" }}
-      {{ if lt $i 12 }}
-      <a class="ui card" href="{{ .html_url }}" target="_blank">
-        <div class="content">
-          <div class="header">
-            {{ .name }} <i class="fas fa-star"></i>{{ .stargazers_count }}
+    <div class="nine wide column">
+      <h2>Github Repositories</h2>
+      <div class="ui cards">
+      {{ range $i, $v := sort $git_repos "stargazers_count" "desc" }}
+        {{ if lt $i 12 }}
+        <a class="ui card" href="{{ .html_url }}" target="_blank">
+          <div class="content">
+            <div class="header">
+              {{ .name }} <i class="fas fa-star"></i>{{ .stargazers_count }}
+            </div>
+
+            {{ if eq ( .description ) nil }}
+              <div class="description">No Description</div>
+            {{ else }}
+              <div class="description">{{ .description }}</div>
+            {{ end }}
+
+            {{ if eq ( .fork ) true }}
+              <div class="ui bottom right attached blue label">Forked</div>  
+            {{ else }}
+              <div class="ui bottom right attached orange label">Original</div>  
+            {{ end }}
           </div>
-
-          {{ if eq ( .description ) nil }}
-            <div class="description">No Description</div>
-          {{ else }}
-            <div class="description">{{ .description }}</div>
-          {{ end }}
-
-          {{ if eq ( .fork ) true }}
-            <div class="ui bottom right attached blue label">Forked</div>  
-          {{ else }}
-            <div class="ui bottom right attached orange label">Original</div>  
-          {{ end }}
-
-        </div>
-      </a>
+        </a>
+        {{ end }}
       {{ end }}
-    {{ end }}
+      </div>
     </div>
+
+    <div class="five wide column">
+      {{ range .Site.RegularPages }}
+        <div class="ui divided items">
+          <div class="middle aligned content">
+            <h2><a class="item" href={{ .Permalink }}>{{ .Name }}</a></h2>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
   {{ end }}
 
 
