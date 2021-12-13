@@ -74,10 +74,11 @@
     </div>
 
     <div class="five wide column">
+      <h2>Site Contents</h2>
       {{ range .Site.RegularPages }}
         <div class="ui divided items">
           <div class="middle aligned content">
-            <h2><a class="item" href={{ .Permalink }}>{{ .Name }}</a></h2>
+            <h3><a class="item" href={{ .Permalink }}>{{ .Name }}</a></h3>
           </div>
         </div>
       {{ end }}
