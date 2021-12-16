@@ -82,7 +82,7 @@
   <div class="one wide column"></div> <!-- 幅調整カラム -->
   <div class="five wide column">
     <h2>Site Contents</h2>
-    {{ range .Site.RegularPages }}
+    {{ range .Site.Sections }}
       <div class="ui divided items">
         <div class="middle aligned content">
           <h3><a class="item" href={{ .Permalink }}>{{ .Name }}</a></h3>

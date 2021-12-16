@@ -27,6 +27,7 @@
     </div>
     <!-- サイドバー 中身-->
     <div class="ui sidebar inverted vertical menu">
+    <!-- <div class="ui visible sidebar inverted vertical menu"> -->
         <div class="ui segment">
             <img class="ui centered medium image" src="{{ "/images/top_icon.jpg" | relURL }}">
             <p style="text-align: center">
@@ -41,9 +42,14 @@
         </div>
 
         <a class="item" href={{ .Site.BaseURL }}>TOP PAGE</a>
-        {{ range .Site.RegularPages }}
+        {{ range .Site.Sections }}
             <a class="item" href={{ .Permalink }}>{{ .Name }}</a>
         {{ end }}
     </div>
 </div>
 
+{{ .Site.Menus}}
+
+{{ range .Site.Menus.icon }}
+    {{ . }}<br>
+{{ end }}
