@@ -34,11 +34,20 @@
                 {{ if .Site.Author.name }} Name: {{ .Site.Author.name }} <br>{{ end }}
                 {{ if .Site.Author.location }} Place: {{ .Site.Author.location }}<i class="{{ .Site.Author.location | urlize }} flag"></i>{{ end }}
             </p>
+
+            <!-- Icons -->
+            {{ if .Site.Menus.icon }}
             <center><div class="fa-2x bgc">
-                {{ range .Site.Params.Shortcuts }}
-                    <a href="{{ .Url }}" target="_blank">{{ .Shortcuts_tag | safeHTML }}</a>
+                {{ range sort .Site.Menus.icon }}
+                    {{ if eq (.Name) "blog" }}
+                        <a href="{{ .URL }}" target="_blank"><i class="fas fa-{{ .Name }} fa-fw icon_black faa-tada animated-hover"></i></a>
+                    {{ else }}
+                        <a href="{{ .URL }}" target="_blank"><i class="fab fa-{{ .Name }} fa-fw icon_black faa-tada animated-hover"></i></a>
+                    {{ end }}
                 {{ end }}
             </div></center>
+            {{ end }}
+
         </div>
 
         <a class="item" href={{ .Site.BaseURL }}>TOP PAGE</a>
@@ -47,9 +56,3 @@
         {{ end }}
     </div>
 </div>
-
-{{ .Site.Menus}}
-
-{{ range .Site.Menus.icon }}
-    {{ . }}<br>
-{{ end }}

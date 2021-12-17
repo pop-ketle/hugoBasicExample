@@ -18,23 +18,23 @@ theme = "GoldExperience"
 
 [menu]
   [[menu.icon]]
-    shortcuts_tag = '<i class="fab fa-twitter fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://twitter.com/ken7272popqjim'
+    name = "twitter"
+    url = "https://twitter.com/ken7272popqjim"
     weight = 1
 
   [[menu.icon]]
-    shortcuts_tag = '<i class="fab fa-kaggle fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://www.kaggle.com/popketle'
+    name = "kaggle"
+    url = "https://www.kaggle.com/popketle"
     weight = 2
 
   [[menu.icon]]
-    shortcuts_tag = '<i class="fab fa-github fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://github.com/pop-ketle'
+    name = "github"
+    url = "https://github.com/pop-ketle"
     weight = 3
     
   [[menu.icon]]
-    shortcuts_tag = '<i class="fas fa-blog fa-fw icon_black faa-tada animated-hover"></i>'
-    url = 'https://pop-ketle.hatenablog.com/'
+    name = "blog"
+    url = "https://pop-ketle.hatenablog.com/"
     weight = 4
 
   [[menu.main]]

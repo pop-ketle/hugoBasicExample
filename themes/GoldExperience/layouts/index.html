@@ -9,11 +9,20 @@
       {{ if .Site.Author.name }} {{ .Site.Author.name }} <br><br>{{ end }}
       {{ if .Site.Author.location }} {{ .Site.Author.location }} {{ end }}
     </font></p>
+
+    <!-- Icons -->
+    {{ if .Site.Menus.icon }}
     <center><div class="fa-3x bgc">
-      {{ range .Site.Params.Shortcuts }}
-        <a href="{{ .Url }}" target="_blank">{{ .Shortcuts_tag | safeHTML }}</a>
-      {{ end }}
+        {{ range sort .Site.Menus.icon }}
+            {{ if eq (.Name) "blog" }}
+                <a href="{{ .URL }}" target="_blank"><i class="fas fa-{{ .Name }} fa-fw icon_black faa-tada animated-hover"></i></a>
+            {{ else }}
+                <a href="{{ .URL }}" target="_blank"><i class="fab fa-{{ .Name }} fa-fw icon_black faa-tada animated-hover"></i></a>
+            {{ end }}
+        {{ end }}
     </div></center>
+    {{ end }}
+
   </div>
 
   <div class="ten wide column">
