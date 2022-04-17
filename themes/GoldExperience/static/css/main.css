@@ -19,6 +19,14 @@ h1#biography {
     border-left: solid 5px #7db4e6;/*左線*/
 }
 
+#vanta_birds {
+    color: #fff;
+    font-size: 4rem;
+    display: grid;
+    place-items: center;
+    height: 100px;
+}
+
 .icon_black{color:#000000;}
 
 /* アイコンのホバー時の色 */
@@ -56,4 +64,4 @@ a::after {
 }
 a:hover::after {
     transform: scale(1, 1);
-}  
+}

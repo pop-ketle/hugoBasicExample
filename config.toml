@@ -78,6 +78,9 @@ series = "series"
 [params]
   [params.github_acount]
     name = "pop-ketle"
+    show_repositories = true
+    n_repositories = 4
+    show_contributions = true
 
   [params.shortcuts]
     [params.shortcuts.0]

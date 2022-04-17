@@ -56,17 +56,17 @@ function doSearch() {
 }
 
 
-// 追従スクロール https://coco-factory.jp/ugokuweb/move01/5-1-10/
-//画面が読み込まれたら＆リサイズされたら
-$(window).on('load resize', function() {
-	var windowWidth = window.innerWidth;
-	var elements = $('nav');//position: sticky;を指定している要素
-	if (windowWidth >= 768) {/*768px以上にIE用のJSをきかせる*/
-		Stickyfill.add(elements);
-	}else{
-		Stickyfill.remove(elements);
-	} 
-});
+// // 追従スクロール https://coco-factory.jp/ugokuweb/move01/5-1-10/
+// //画面が読み込まれたら＆リサイズされたら
+// $(window).on('load resize', function() {
+// 	var windowWidth = window.innerWidth;
+// 	var elements = $('nav');//position: sticky;を指定している要素
+// 	if (windowWidth >= 768) {/*768px以上にIE用のJSをきかせる*/
+// 		Stickyfill.add(elements);
+// 	}else{
+// 		Stickyfill.remove(elements);
+// 	} 
+// });
 
 //リンク先のidまでスムーススクロール
 //※ページ内リンクを行わない場合は不必要なので削除してください
@@ -75,4 +75,18 @@ $(window).on('load resize', function() {
 	var pos = $(elmHash).offset().top-0;
 	$('body,html').animate({scrollTop: pos}, 1000);
 	return false;
+});
+
+VANTA.BIRDS({
+    el: "#vanta_birds",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 500.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    backgroundColor: 0xa0cbdc,
+    color1: 0xed8367,
+    color2: 0xd77211
 });
