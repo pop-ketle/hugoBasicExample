@@ -19,6 +19,11 @@ h1#biography {
     border-left: solid 5px #7db4e6;/*左線*/
 }
 
+/* なんか効かない */
+h2#interests #skillsets{
+    border-bottom: solid 3px #000000;/*下線*/
+}
+
 #vanta_birds {
     color: #fff;
     font-size: 4rem;
